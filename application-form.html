@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="static/styles.css">
+        <title>Application Form</title>
+    </head>
+    <body>
+
+        <h1>Application Form
+        </h1>
+
+        <p>Thank you for your interest in job opportunities at Ubermelon! Please fill out the following information.</p>
+
+        <form action='/application' method='POST'>
+            <label>First name:
+                <input type='text' name='firstname'> 
+            </label>
+            <br>
+            <label>Last name:
+                <input type='text' name='lastname'>
+            </label>
+            <br><br>
+            <label>Salary requirement: $
+                <input type='text' name='salary'>
+            </label>
+            <br><br>
+            <label>Select the position you're applying for:<br>
+                <input type='radio' name='position' value='softwareengineer'>Software Engineer
+                <input type='radio' name='position' value='qaengineer'>QA Engineer
+                <input type='radio' name='position' value='productmanager'>Product Manager
+            </label>
+            <br><br>
+                <input type='submit' class='button'>
+        </form>
+    </body>
+</html>
+
