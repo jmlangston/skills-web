@@ -11,7 +11,7 @@
 
         <p>Thank you for your interest in job opportunities at Ubermelon! Please fill out the following information.</p>
 
-        <form action="/application" method="POST">
+        <form action='/application' method='POST'>
             <label>First name:
                 <input type='text' name='firstname'> 
             </label>
@@ -25,10 +25,9 @@
             </label>
             <br><br>
             <label>Select the position you're applying for:<br>
-                <select name='position'>
-                    <option value='Software Engineer'>Software Engineer</option>
-                    <option value='QA Engineer'>QA Engineer</option>
-                    <option value='Product Manager'>Product Manager</option>
+                <input type='radio' name='position' value='softwareengineer'>Software Engineer
+                <input type='radio' name='position' value='qaengineer'>QA Engineer
+                <input type='radio' name='position' value='productmanager'>Product Manager
             </label>
             <br><br>
                 <input type='submit' class='button'>
@@ -36,9 +35,3 @@
     </body>
 </html>
 
-
-
-
-<!--            <input type='radio' name='position' value='Software Engineer'>Software Engineer
-                <input type='radio' name='position' value='QA Engineer'>QA Engineer
-                <input type='radio' name='position' value='Product Manager'>Product Manager -->

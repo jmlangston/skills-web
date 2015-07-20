@@ -82,8 +82,9 @@
 <h2>Plain Javacript</h2>
 <p>You may not use jQuery for this section!</p>
 
+<!-- import jQuery -->
 
-
+<script src="https://code.jquery.com/jquery.js"></script>
 
 
 <h3>Making an Event Handler</h3>
@@ -98,6 +99,14 @@
 
 <script>
   // code here for above problem
+  var button = document.getElementById("popup-alert-button");
+
+  function alertClick() {
+    alert("Hello, Jessica!");
+  }
+
+  button.addEventListener('click', alertClick);
+  
 </script>
 
 
@@ -116,6 +125,17 @@
 
 <script>
   // code here for above-problem
+
+var button = document.getElementById("change-hello-to-goodbye-button");
+
+function changeHelloToGoodbye() {
+  // code here to change the word hello to goodbye
+  var wordInItalics = document.getElementById("message-to-change");
+  wordInItalics.innerText = 'goodbye';
+}
+
+button.addEventListener('click', changeHelloToGoodbye);
+
 </script>
 
 <div class="hint">
@@ -145,6 +165,17 @@
 
 <script>
   // code here for above problem
+
+  var submissionForm = document.getElementById('prevent-form-submission-form');
+  var textInput = document.getElementById('favorite-color-field');
+
+  function alertInstead(evt) {
+    alert(textInput.value);
+    evt.preventDefault();
+  }
+
+  submissionForm.addEventListener('submit', alertInstead);
+
 </script>
 
 <div class="hint">
@@ -176,20 +207,20 @@
 <script>
 //  Here's a stub of a function you can use!
 
-//  function reverseString() {
-//    var msg = "Porcupines are cute";
-//
-//    // do some stuff here to reverse that string into a new variable
-//    var newMsg = "This should be the reversed string";
-//
-//    alert(newMsg);
-//  }
+ function reverseString() {
+   var msg = "Porcupines are cute";
+   newMsg = msg.split('').reverse().join('');
+   alert(newMsg);
+ }
+
+// do some stuff here to reverse that string into a new variable
 
 // Here's a stub of event stuff you could use
-//
 
-//  var button = document.getElementById('reverse-string-button');
-//  button.addEventListener('click', reverseString);
+ var button = document.getElementById('reverse-string-button');
+
+ button.addEventListener('click', reverseString);
+
 </script>
 
 
@@ -214,6 +245,19 @@
 
 <script>
   // code here for above problem
+
+  // first in JavaScript
+  // var buttonInArray = document.getElementsByClassName("tricky-to-find");
+  // var button = buttonInArray[0];
+
+  function popUpPlease() {
+    alert("Here's a pop-up!");
+  }
+
+  // button.addEventListener('click', popUpPlease);
+
+  $('.tricky-to-find').on('click', popUpPlease);
+
 </script>
 
 <div class="hint">
@@ -221,8 +265,6 @@
     You can find things by class name&mdash;but then you get back an array.
   </div>
 </div>
-
-
 
 
 
@@ -241,6 +283,14 @@
 
 <script>
   // put your code here
+
+  function dogPhoto() {
+    $("img#kittenz-rule").attr("src", "http://images4.champdogs.net/27871/p77426167.jpg");
+  }
+
+  $("img#kittenz-rule").on('dblclick', dogPhoto);
+
+
 </script>
 
 <div class="hint">
@@ -248,7 +298,6 @@
     How do you change an attribute with jQuery?
   </div>
 </div>
-
 
 
 
@@ -274,6 +323,18 @@
 
 <script>
   // put your code here
+
+  function showPorcupine() {
+    $("#cute-porcupine-image").slideDown(5000);
+  }
+
+  function startTimer() {
+    setTimeout(showPorcupine, 1000)
+  }
+
+  $("#make-a-porcupine").on('click', startTimer);
+
+
 </script>
 
 <div class="hint">
@@ -306,6 +367,21 @@
 
 <script>
   // put your code here
+
+  // get button 
+  var button = document.getElementByValue("I'm Very Agreeable");
+
+  // get favorite food element
+  var food = $("#favorite-food-input");
+
+  function showAgreeableText(evt) {
+    $("#agreeable-text").html("I like " + food + ", too!");
+    evt.preventDefault();
+  }
+
+  // $("[value="I\'m Very Agreeable"]").on("click", showAgreeableText);
+
+
 </script>
 
 <div class="hint">
